@@ -350,6 +350,16 @@
     color: var(--text-faint);
     font-style: italic;
   }
+  .proj-link{
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--turquoise);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .proj-link:hover{ text-decoration: underline; }
 
   /* ---------- Certs & Education ---------- */
   .cert-grid{ display:grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
@@ -626,6 +636,30 @@
         <span class="fill-note">Individual project — Risk Analysis &amp; Abatement (SM 6362), Master of Security Management</span>
       </div>
 
+      <div class="proj-card accent-dim">
+        <div class="proj-top">
+          <h3 class="proj-title">Hospital GRC Risk Assessment</h3>
+          <span class="status-pill status-completed">Completed</span>
+        </div>
+        <p class="proj-desc">
+          A full NIST SP 800-30 information security risk assessment for the same
+          fictional 350-bed hospital from "Beyond Our Walls" — this project answers
+          how bad the exposure actually is. Built a 15-risk register scored by
+          likelihood × impact, mapped to the HIPAA Security Rule, NIST CSF 2.0, and
+          HHS 405(d) HICP. Found 2 critical and 11 high risks before treatment (down
+          to zero after), tested 14 safeguards against HIPAA/NIST (only 1 fully
+          implemented), and tiered 13 sample vendors by risk — flagging a building
+          HVAC contractor as high-risk purely from network access, despite holding no
+          patient data.
+        </p>
+        <div class="proj-tools">
+          <span class="tag">NIST SP 800-30</span>
+          <span class="tag">HIPAA / NIST CSF</span>
+          <span class="tag">Excel</span>
+        </div>
+        <a class="proj-link" href="https://github.com/TheTolulope/hospital-grc-risk-assessment" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
       <div class="proj-card accent-magenta">
         <div class="proj-top">
           <h3 class="proj-title">EduTech Learning Solutions: Cyber Risk Assessment</h3>
@@ -649,33 +683,23 @@
 
       <div class="proj-card accent-purple">
         <div class="proj-top">
-          <h3 class="proj-title">Home Network Recon</h3>
-          <span class="status-pill status-planned">Planned</span>
+          <h3 class="proj-title">Healthcare Phishing Analyzer</h3>
+          <span class="status-pill status-completed">Completed</span>
         </div>
         <p class="proj-desc">
-          Scanning my own home network to enumerate devices, open ports, and running
-          services, then writing up what I found and what I'd flag as a risk.
+          A Python command-line tool that scans plain-text emails for phishing red
+          flags, with extra detection for lures that specifically target patients and
+          healthcare staff — fake patient-portal alerts, lab-result notices, insurance
+          claims, and HIPAA-themed pressure language. It also checks sender/reply-to
+          domain mismatches, suspicious links (shorteners, raw IPs, insecure HTTP,
+          domain-impersonation keywords), and risky attachment types, then outputs a
+          weighted risk score and verdict.
         </p>
         <div class="proj-tools">
-          <span class="tag">Nmap</span>
+          <span class="tag">Python</span>
+          <span class="tag">Email Header Analysis</span>
         </div>
-        <span class="fill-note">Write-up &amp; screenshots coming soon</span>
-      </div>
-
-      <div class="proj-card accent-dim">
-        <div class="proj-top">
-          <h3 class="proj-title">Packet Capture Analysis</h3>
-          <span class="status-pill status-planned">Planned</span>
-        </div>
-        <p class="proj-desc">
-          Capturing traffic on my own machine to identify protocols in use and locate
-          something like an unencrypted login or a plaintext DNS query, explained in
-          plain language.
-        </p>
-        <div class="proj-tools">
-          <span class="tag">Wireshark</span>
-        </div>
-        <span class="fill-note">Write-up &amp; screenshots coming soon</span>
+        <a class="proj-link" href="https://github.com/TheTolulope/healthcare-phishing-analyzer" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
 
     </div>
